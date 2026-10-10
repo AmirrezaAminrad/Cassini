@@ -1,0 +1,3 @@
+Cassini is a TypeScript port of Voyager (https://github.com/spotify/voyager),
+Copyright Spotify AB, licensed under the Apache License 2.0. The HNSW
+algorithm follows Malkov & Yashunin (2016) and hnswlib.

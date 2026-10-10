@@ -1,0 +1,44 @@
+{
+  "name": "cassini-hnsw",
+  "version": "0.1.0",
+  "description": "Pure TypeScript port of Spotify Voyager: HNSW approximate nearest-neighbour search with cosine, euclidean and dot spaces, seeded deterministic builds and snapshots.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "keywords": [
+    "hnsw",
+    "ann",
+    "nearest-neighbor",
+    "vector-search",
+    "voyager"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">HNSW layered graph</title>
+  <desc id="d">A query enters at the top layer, hops greedily toward the target, and drops a layer each time it cannot improve, finishing on layer 0.</desc>
+  <rect width="720" height="340" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <g fill="#1f2937" font-size="13">
+    <text x="20" y="84">layer 2</text><text x="20" y="100" font-size="11" fill="#6b7280">few nodes</text>
+    <text x="20" y="164">layer 1</text><text x="20" y="180" font-size="11" fill="#6b7280">some nodes</text>
+    <text x="20" y="244">layer 0</text><text x="20" y="260" font-size="11" fill="#6b7280">every node</text>
+  </g>
+  <g stroke="#9ca3af" stroke-width="2">
+    <line x1="375" y1="90" x2="675" y2="90"/>
+    <line x1="225" y1="170" x2="375" y2="170"/><line x1="375" y1="170" x2="525" y2="170"/><line x1="525" y1="170" x2="675" y2="170"/>
+    <line x1="150" y1="250" x2="225" y2="250"/><line x1="225" y1="250" x2="300" y2="250"/><line x1="300" y1="250" x2="375" y2="250"/><line x1="375" y1="250" x2="450" y2="250"/><line x1="450" y1="250" x2="525" y2="250"/><line x1="525" y1="250" x2="600" y2="250"/><line x1="600" y1="250" x2="675" y2="250"/>
+  </g>
+  <g stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="375" y1="90" x2="375" y2="250"/><line x1="675" y1="90" x2="675" y2="250"/>
+    <line x1="225" y1="170" x2="225" y2="250"/><line x1="525" y1="170" x2="525" y2="250"/>
+  </g>
+  <g stroke="#2563eb" stroke-width="4" fill="none" stroke-linecap="round">
+    <line x1="375" y1="90" x2="375" y2="170"/>
+    <line x1="375" y1="170" x2="525" y2="170"/>
+    <line x1="525" y1="170" x2="525" y2="250"/>
+    <line x1="525" y1="250" x2="600" y2="250"/>
+  </g>
+  <g fill="#e5e7eb" stroke="#6b7280" stroke-width="2">
+    <circle cx="675" cy="90" r="10"/>
+    <circle cx="225" cy="170" r="10"/><circle cx="675" cy="170" r="10"/>
+    <circle cx="150" cy="250" r="10"/><circle cx="225" cy="250" r="10"/><circle cx="300" cy="250" r="10"/><circle cx="375" cy="250" r="10"/><circle cx="450" cy="250" r="10"/><circle cx="675" cy="250" r="10"/>
+  </g>
+  <g fill="#bfdbfe" stroke="#2563eb" stroke-width="3">
+    <circle cx="375" cy="90" r="10"/><circle cx="375" cy="170" r="10"/><circle cx="525" cy="170" r="10"/><circle cx="525" cy="250" r="10"/>
+  </g>
+  <circle cx="600" cy="250" r="12" fill="#2563eb"/>
+  <g font-size="12" fill="#1f2937">
+    <text x="320" y="62">entry point</text>
+    <text x="540" y="286" fill="#2563eb" font-weight="600">nearest to query</text>
+  </g>
+  <text x="360" y="318" font-size="12" fill="#1f2937" text-anchor="middle">greedy descent: hop to a closer neighbour, drop a layer when none is closer; beam search (ef) on layer 0</text>
+</svg>

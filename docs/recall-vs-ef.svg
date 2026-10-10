@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Recall at 10 versus query ef</title>
+  <desc id="d">Recall rises with ef and falls as the index grows. At ef 200: 0.999 for 2,000 vectors, 0.964 for 10,000, 0.875 for 30,000.</desc>
+  <rect width="640" height="360" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="70" y="26" font-size="15" font-weight="600" fill="#1f2937">Recall@10 vs query ef</text>
+  <text x="70" y="44" font-size="11" fill="#6b7280">64-d cosine, uniform random vectors (worst case), M=12, efConstruction=200</text>
+  <g stroke="#e5e7eb"><line x1="70" y1="300" x2="600" y2="300"/><line x1="70" y1="235" x2="600" y2="235"/><line x1="70" y1="170" x2="600" y2="170"/><line x1="70" y1="105" x2="600" y2="105"/><line x1="70" y1="40" x2="600" y2="40"/></g>
+  <g font-size="11" fill="#6b7280" text-anchor="end"><text x="62" y="304">0</text><text x="62" y="239">0.25</text><text x="62" y="174">0.5</text><text x="62" y="109">0.75</text><text x="62" y="44">1.0</text></g>
+  <g font-size="12" fill="#1f2937" text-anchor="middle"><text x="130" y="322">ef = 20</text><text x="335" y="322">ef = 50</text><text x="540" y="322">ef = 200</text></g>
+  <g fill="none" stroke-width="3" stroke-linejoin="round">
+    <polyline stroke="#2a78d6" points="130,116 335,63 540,40"/>
+    <polyline stroke="#1f9d6b" points="130,181 335,120 540,49"/>
+    <polyline stroke="#d9642b" points="130,218 335,164 540,73"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="2">
+    <g fill="#2a78d6"><circle cx="130" cy="116" r="5"/><circle cx="335" cy="63" r="5"/><circle cx="540" cy="40" r="5"/></g>
+    <g fill="#1f9d6b"><circle cx="130" cy="181" r="5"/><circle cx="335" cy="120" r="5"/><circle cx="540" cy="49" r="5"/></g>
+    <g fill="#d9642b"><circle cx="130" cy="218" r="5"/><circle cx="335" cy="164" r="5"/><circle cx="540" cy="73" r="5"/></g>
+  </g>
+  <g font-size="11" fill="#1f2937"><text x="550" y="38">.999</text><text x="550" y="58">.964</text><text x="550" y="83">.875</text></g>
+  <g font-size="12" fill="#1f2937">
+    <rect x="130" y="262" width="12" height="12" fill="#2a78d6"/><text x="148" y="272">2 000 vectors</text>
+    <rect x="130" y="280" width="12" height="12" fill="#1f9d6b"/><text x="148" y="290">10 000 vectors</text>
+    <rect x="270" y="262" width="12" height="12" fill="#d9642b"/><text x="288" y="272">30 000 vectors</text>
+  </g>
+</svg>
